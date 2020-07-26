@@ -1,7 +1,7 @@
 # SmugMug API OAuth 1 authenticator
 
 This is a very simple web application that can help you to obtain the user tokens required to
-use SmugMug API.
+use SmugMug API and the [SmugMug Backup App](https://github.com/tommyblue/smugmug-backup).
 
 A live version exists at [https://smugmug-api-authenticator.herokuapp.com/](https://smugmug-api-authenticator.herokuapp.com/), feel free to use it if you trust me. But if you don't (and you should not trust anyone in
 the wild), then clone this repository and run the app by yourself.
