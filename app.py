@@ -23,8 +23,6 @@ def index():
         return render_template(
             "test.html", token=oauth.USER_TOKEN, secret=oauth.USER_SECRET,
         )
-    elif has_keys():
-        return render_template("auth.html")
     else:
         return render_template("index.html")
 
