@@ -1,0 +1,44 @@
+{% extends "_base.html" %}
+{% block title %}Index{% endblock %}
+{% block content %}
+    <h1 class="is-size-1">SmugMug API Authenticator</h1>
+    <div class="my-3">
+        This app will help you get OAuth1 credentials from <a href="https://www.smugmug.com/" target="_blank">SmugMug</a>.
+        Credentials can be used to configure the <a href="https://github.com/tommyblue/smugmug-backup" target="_blank">SmugMug Backup App</a>.
+        This web app is open-source and can be found on <a href="https://github.com/tommyblue/smugmug-api-authenticator" target="_blank">GitHub</a>.
+        You can use it from this page or you can clone the repository and run your own instance.
+        If you prefer other ways to get your credentials, check the <a href="https://github.com/tommyblue/smugmug-backup/blob/master/README.md" target="_blank">SmugMug Backup App Readme file</a>
+    </div>
+    <article class="message">
+        <div class="message-header">
+          <p>Get your credentials</p>
+        </div>
+        <div class="message-body">
+            <form action="/auth" method="POST">
+                <fieldset>
+                    <legend>
+                        Insert key and secret for your app. If you don't have one, get them <a href="https://api.smugmug.com/api/developer/apply" target="_blank">here</a>.
+                        You'll be first redirected to the SmugMug website to enter your credentials and then back here to copy the token and secret keys you'll need to paste into the SmugMug backup app.
+                    </legend>
+                    <div class="field">
+                        <label class="label">App key</label>
+                        <div class="control">
+                            <input class="input" type="text" name="key" placeholder="App key" />
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">App secret</label>
+                        <div class="control">
+                            <input class="input" type="text" name="secret" placeholder="App secret" />
+                        </div>
+                    </div>
+                    <div class="field is-grouped">
+                        <div class="control">
+                            <button type="submit" class="button is-link">Send</button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+      </article>
+{% endblock %}

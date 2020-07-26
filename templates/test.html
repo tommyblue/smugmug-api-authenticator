@@ -1,0 +1,46 @@
+{% extends "_base.html" %}
+{% block title %}Index{% endblock %}
+{% block content %}
+    <h1 class="is-size-1">Test your credentials</h1>
+    {% if token or secret %}
+            <table class="table is-bordered">
+                <thead>
+                    <tr class="is-selected">
+                        <th colspan="2">Credentials</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Token</th>
+                        <td>{{ token }}</td>
+                    </tr>
+                    <tr>
+                        <th>Secret</th>
+                        <td>{{ secret }}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+    {% endif %}
+    <form action="/test" method="GET">
+        <fieldset>
+            <legend>Insert a SmugMug API URL to test your credentials.</legend>
+            <div class="field">
+                <label class="label">API URL</label>
+                <div class="control">
+                    <input class="input" type="text" name="path" value="/api/v2!authuser" />
+                </div>
+            </div>
+            <div class="field is-grouped">
+                <div class="control">
+                    <button type="submit" class="button is-link">Get!</button>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+    {% if json %}
+    <h2 class="is-size-3">Response:</h2>
+    <pre>{{json}}</pre>
+    {% endif %}
+{% endblock %}
