@@ -7,7 +7,6 @@ import oauth
 from utils import fix_auth_url
 
 app = Flask(__name__)
-app.secret_key = os.environ["SECRET_KEY"]
 
 
 def has_access() -> bool:
