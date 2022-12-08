@@ -4,19 +4,32 @@
 #
 #    pip-compile --output-file=requirements.txt requirements.in
 #
-certifi==2020.6.20        # via requests
-chardet==3.0.4            # via requests
-click==7.1.2              # via flask
-flask==1.1.2              # via -r requirements.in
-gunicorn==20.0.4          # via -r requirements.in
-idna==2.10                # via requests
-itsdangerous==1.1.0       # via flask
-jinja2==2.11.2            # via flask
-markupsafe==1.1.1         # via jinja2
-rauth==0.7.3              # via -r requirements.in
-requests==2.24.0          # via rauth
-urllib3==1.25.10          # via requests
-werkzeug==1.0.1           # via flask
+certifi==2022.12.7
+    # via requests
+chardet==3.0.4
+    # via requests
+click==7.1.2
+    # via flask
+flask==1.1.2
+    # via -r requirements.in
+gunicorn==20.0.4
+    # via -r requirements.in
+idna==2.10
+    # via requests
+itsdangerous==1.1.0
+    # via flask
+jinja2==2.11.2
+    # via flask
+markupsafe==1.1.1
+    # via jinja2
+rauth==0.7.3
+    # via -r requirements.in
+requests==2.24.0
+    # via rauth
+urllib3==1.25.10
+    # via requests
+werkzeug==1.0.1
+    # via flask
 
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools
